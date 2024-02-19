@@ -1209,15 +1209,23 @@ select#website-select{
       margin-bottom: 50px;
     }
 
+    .pages-content .row{
+      gap: 20px;
+    }
+
     .section-ptb {
-        padding: 50px 0;
+        padding: 80px 30px;
+    }
+
+    .event-calender{
+      padding: 80px 15px;
     }
 
     .mb--80 {
       margin-bottom: 30px;
     }
 
-    .section-title-three p {
+    .section-title-three p, .page-desc p  {
         font-size: 14px;
     }
 
@@ -1225,6 +1233,14 @@ select#website-select{
         font-size: 24px;
         font-weight: 700;
         margin: 0;
+    }
+    
+    .page-img{
+      flex-direction: column;
+    }
+
+    .vim-p{
+      font-size: 14px !important;
     }
 
     .gallery-photo-group {
@@ -1264,6 +1280,14 @@ select#website-select{
       grid-template-columns: repeat(1, 1fr);
       gap: 20px;
       padding: 50px;
+    }
+
+    .contact-title > h3 {
+      margin-bottom: 15px;
+    }
+
+    .contact-dec p{
+      font-size: 14px;
     }
   
     .footer-inner .upper-footer{

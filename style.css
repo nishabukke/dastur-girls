@@ -692,7 +692,7 @@ select#website-select{
   }
   
   .header #month {
-    color: #ff5252;
+    color: #073e7d;
     font-size: 30px;
     font-weight: 600;
   }
@@ -1042,9 +1042,27 @@ select#website-select{
     width: 100%;
   }
 
+  .features-content , .about-content, .event-calender, .photo-gallery{
+    padding: 80px 40px;
+}
+
   .single-feature-category{
     margin-top: 0px;
     margin-bottom: 50px;
+  }
+
+  .feature-icon-inner{
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+  }
+
+  .single-feature-category .feature-icon {
+    margin-top: -40px;
+  }
+
+  .feature-icon-inner img{
+    width: 30px;
   }
 
   .violet{
@@ -1067,10 +1085,11 @@ select#website-select{
   .about-row{
   flex-direction: column-reverse;
   gap: 20px;
+  padding: 0;
   }
 
   .header #month {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   .header button {
@@ -1090,14 +1109,9 @@ select#website-select{
     margin-top: 30px;
   }
 
-  .photo-gallery{
-    padding: 50px 0px;
-  }
-
   .photo-gallery-container {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
-    padding: 50px;
   }
 
   .footer-inner .upper-footer{
