@@ -1023,6 +1023,136 @@ select#website-select{
     }
 }
 
+@media screen and (max-width: 768px) {
+  
+  .upper-header, .lower-header{
+    display: none;
+  }
+
+  
+.mobile-header{
+  display: block;
+}
+
+  #carousel .carousel-item{
+    height: auto;
+  }
+
+  .coustom-col-3 {
+    width: 100%;
+  }
+
+  .features-content , .about-content, .event-calender, .photo-gallery{
+    padding: 80px 40px;
+}
+
+  .single-feature-category{
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+
+  .feature-icon-inner{
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+  }
+
+  .single-feature-category .feature-icon {
+    margin-top: -40px;
+  }
+
+  .feature-icon-inner img{
+    width: 30px;
+  }
+
+  .violet{
+    margin-bottom: 0;
+  }
+
+  
+  .section-title-three p {
+    font-size: 14px;
+}
+
+  .mb--80 {
+    margin-bottom: 30px;
+  }
+
+  .about-desc p{
+    font-size: 14px;
+  }
+
+  .about-row{
+  flex-direction: column-reverse;
+  gap: 20px;
+  padding: 0;
+  }
+
+  .header #month {
+    font-size: 16px;
+  }
+
+  .header button {
+    width: 50px;
+  }
+
+  .weekdays{
+    font-size: 14px;
+  }
+
+  .day {
+    width: 40px;
+    height: 40px;
+  }
+
+  .event-desc {
+    margin-top: 30px;
+  }
+
+  .photo-gallery-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .footer-inner .upper-footer{
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-links hr {
+    margin: 5px auto;
+  }
+
+  .footer-links h5{
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .footer-logo img{
+    width: 100px;
+  }
+
+  .footer-links ul li{
+    font-size: 14px;
+  }
+
+  .useful-links{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .lower-footer-links {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .lower-footer-links p {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   
   .upper-header, .lower-header{

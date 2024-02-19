@@ -838,7 +838,7 @@ select#website-select{
   }
   
   .header #month {
-    color: #ff5252;
+    color: #073e7d;
     font-size: 30px;
     font-weight: 600;
   }
@@ -1183,6 +1183,151 @@ select#website-select{
 }
 
 
+@media screen and (max-width: 768px) {
+  
+  .upper-header, .lower-header{
+    display: none;
+  }
+
+  
+.mobile-header{
+display: block;
+}
+
+
+  #carousel .carousel-item{
+    height: auto;
+  }
+
+  .coustom-col-3 {
+    width: 100%;
+  }
+
+  .single-feature-category{
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+
+  .pages-content .row{
+    gap: 20px;
+  }
+
+  .section-ptb {
+      padding: 80px 30px;
+  }
+
+  .event-calender{
+    padding: 80px 15px;
+  }
+
+  .mb--80 {
+    margin-bottom: 30px;
+  }
+
+  .section-title-three p, .page-desc p  {
+      font-size: 14px;
+  }
+
+  .breadcrumb-area h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+  }
+  
+  .page-img{
+    flex-direction: column;
+  }
+
+  .vim-p{
+    font-size: 14px !important;
+  }
+
+  .gallery-photo-group {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact-links{
+      margin-bottom: 30px;
+  }
+
+  .header #month {
+    font-size: 24px;
+  }
+
+  .header button {
+    width: 50px;
+  }
+
+  .weekdays{
+    font-size: 14px;
+  }
+
+  .day {
+    width: 40px;
+    height: 40px;
+  }
+
+  .event-desc {
+    margin-top: 30px;
+  }
+
+  .photo-gallery{
+    padding: 50px 0px;
+  }
+
+  .photo-gallery-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    padding: 50px;
+  }
+
+  .contact-title > h3 {
+    margin-bottom: 15px;
+  }
+
+  .contact-dec p{
+    font-size: 14px;
+  }
+
+  .footer-inner .upper-footer{
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-links hr {
+    margin: 5px auto;
+  }
+
+  .footer-links h5{
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .footer-logo img{
+    width: 100px;
+  }
+
+  .footer-links ul li{
+    font-size: 14px;
+  }
+
+  .useful-links{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .lower-footer-links {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .lower-footer-links p {
+    font-size: 12px;
+  }
+}
+
 
 @media screen and (max-width: 450px) {
   
@@ -1252,7 +1397,7 @@ select#website-select{
     }
   
     .header #month {
-      font-size: 24px;
+      font-size: 16px;
     }
   
     .header button {
