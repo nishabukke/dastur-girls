@@ -1,140 +1,99 @@
 
-// mobile menu
-
-function openNav(){
-  // var element = document.getElementsByClassName("menu_mobile");
-  document.getElementById("menu_mobile").style.marginLeft = '0px';
-  document.getElementById('menu_mobile_overlay').style.display = 'block';
-  document.getElementById('icon-cancel').style.display = 'block';
-}
-
-function closeNav(){
-  // var element = document.getElementsByClassName("menu_mobile");
-  document.getElementById("menu_mobile").style.marginLeft = '-300px';
-  document.getElementById('menu_mobile_overlay').style.display = 'none';
-  document.getElementById('icon-cancel').style.display = 'none';
-}
-
-document.querySelectorAll('.accordion-title').forEach((accordionToggle) => {
-
-  accordionToggle.addEventListener('click', () => { 
-    
-    const accordionItem = accordionToggle.parentNode;
-    const accordionContent = accordionToggle.nextElementSibling;
-  
-  // If this accordion item is already open, close it.
-  
-  if (accordionContent.style.maxHeight) {
-  accordionContent.style.maxHeight = null;
-  accordionItem.classList.remove('active');
-    } else {
-    accordionContent.style.maxHeight = 'max-content';
-    // accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-    accordionItem.classList.add('active');
-    }
-    });
-    });
-
-
-
-
-
-
 const holidays = [
     {
-      hdate: "01-01-2023",
+      hdate: "01-01-2025",
       holiday: "New Year Day",
     },
     {
-      hdate: "15-01-2023",
+      hdate: "15-01-2025",
       holiday: "Pongal",
     },
     {
-      hdate: "16-01-2023",
+      hdate: "16-01-2025",
       holiday: "Thiruvalluvar Day",
     },
     {
-      hdate: "17-01-2023",
+      hdate: "17-01-2025",
       holiday: "Uzhavar Thirunal",
     },
     {
-      hdate: "26-01-2023",
+      hdate: "26-01-2025",
       holiday: "Republic Day",
     },
     {
-      hdate: "05-02-2023",
+      hdate: "05-02-2025",
       holiday: "Thai Poosam",
     },
     {
-      hdate: "22-03-2023",
+      hdate: "22-03-2025",
       holiday: "Telugu New Year Day",
     },
     {
-      hdate: "01-04-2023",
+      hdate: "01-04-2025",
       holiday: "Annual closing of Accounts for Commercial Banks and Co-operative Banks",
     },
     {
-      hdate: "04-04-2023",
+      hdate: "04-04-2025",
       holiday: "Mahaveer Jayanthi",
     },
     {
-      hdate: "07-04-2023",
+      hdate: "07-04-2025",
       holiday: "Good Friday",
     },
     {
-      hdate: "14-04-2023",
+      hdate: "14-04-2025",
       holiday: "Tamil New Years Day and Dr.B.R.Ambedkars Birthday",
     },
     {
-      hdate: "22-04-2023",
+      hdate: "22-04-2025",
       holiday: "Ramzan (Idul Fitr)",
     },
     {
-      hdate: "01-05-2023",
+      hdate: "01-05-2025",
       holiday: "May Day",
     },
     {
-      hdate: "29-06-2023",
+      hdate: "29-06-2025",
       holiday: "Bakrid(Idul Azha)",
     },
     {
-      hdate: "29-07-2023",
+      hdate: "06-07-2025",
       holiday: "Muharram",
     },
     {
-      hdate: "15-08-2023",
+      hdate: "15-08-2025",
       holiday: "Independence Day",
     },
     {
-      hdate: "06-09-2023",
+      hdate: "06-09-2025",
       holiday: "Krishna Jayanthi",
     },
     {
-      hdate: "17-09-2023",
+      hdate: "17-09-2025",
       holiday: "Vinayakar Chathurthi",
     },
     {
-      hdate: "28-09-2023",
+      hdate: "28-09-2025",
       holiday: "Milad-un-Nabi",
     },
     {
-      hdate: "02-10-2023",
+      hdate: "02-10-2025",
       holiday: "Gandhi Jayanthi",
     },
     {
-      hdate: "23-10-2023",
+      hdate: "23-10-2025",
       holiday: "Ayutha Pooja",
     },
     {
-      hdate: "24-10-2023",
+      hdate: "24-10-2025",
       holiday: "Vijaya Dasami",
     },
     {
-      hdate: "12-11-2023",
+      hdate: "12-11-2025",
       holiday: "Deepavali",
     },
     {
-      hdate: "25-12-2023",
+      hdate: "25-12-2025",
       holiday: "Christmas",
     },
   ];
@@ -256,70 +215,133 @@ const holidays = [
   const viewEventForm = document.querySelector("#viewEvent");
   const addEventForm = document.querySelector("#addEvent");
   
-  function showModal(dateText) {
-    clicked = dateText;
-    const eventOfTheDay = events.find((e) => e.date == dateText);
-    if (eventOfTheDay) {
-      //Event already Preset
-      document.querySelector("#eventText").innerText = eventOfTheDay.title;
-      viewEventForm.style.display = "block";
-    } else {
-      //Add new Event
-      addEventForm.style.display = "block";
-    }
-    modal.style.display = "block";
+function showModal(dateText) {
+  clicked = dateText;
+  const eventOfTheDay = events.find((e) => e.date == dateText);
+  const holidayOfTheDay = holidays.find((e) => e.hdate == dateText); // ✅ Check holiday
+
+  // Update the event list
+  const eventList = document.querySelector("#eventList");
+  eventList.innerHTML = ""; // Clear previous list items
+
+  const listItem = document.createElement("li");
+
+  if (eventOfTheDay) {
+    // Show view modal
+    document.querySelector("#eventText").innerText = eventOfTheDay.title;
+    viewEventForm.style.display = "block";
+
+    // Show event in sidebar
+    listItem.innerHTML = `<span>${dateText}</span> ${eventOfTheDay.title}`;
+  } else if (holidayOfTheDay) {
+    // No view modal needed, just show in sidebar
+    addEventForm.style.display = "none";
+    viewEventForm.style.display = "none";
+
+    listItem.innerHTML = `<span>${dateText}</span> ${holidayOfTheDay.holiday}`;
+  } else {
+    // Show add modal if no event/holiday
+    addEventForm.style.display = "block";
+
+    // Still show the date in sidebar, but no event
+    listItem.innerHTML = `<span>${dateText}</span> No events`;
   }
+
+  eventList.appendChild(listItem);
+  modal.style.display = "block";
+}
   
   //Close Modal
-  function closeModal() {
-    viewEventForm.style.display = "none";
-    addEventForm.style.display = "none";
-    modal.style.display = "none";
-    clicked = null;
-    loadCalendar();
-  }
-  
+ function closeModal() {
+  viewEventForm.style.display = "none";
+  addEventForm.style.display = "none";
+  modal.style.display = "none";
+  clicked = null;
+  loadCalendar();
+
+  // Optional: Clear the event list if nothing selected
+  const eventList = document.querySelector("#eventList");
+  eventList.innerHTML = `<li><span>Date</span> No events</li>`;
+}
+
   buttons();
   loadCalendar();
 
 
 
 
-  
-// Open the Modal
-function openModal(modalId) {
-  document.getElementById(modalId).style.display = "flex";
-  // var mainContainer = document.getElementById('top_header');
-  //   mainContainer.style.display = 'none';
+
+  // Lightbox modalGallery
+const body = document.body;
+const items = document.querySelectorAll(".gallery__item");
+const modalGallery = document.createElement("section");
+const modalImg = document.createElement("img");
+const modalPrev = createButton(prevItem);
+const modalNext = createButton(nextItem);
+const modalClose = createButton(closeModal);
+let currentItem = 0;
+
+modalGallery.classList.add("gallery__modal");
+modalPrev.classList.add("gallery__navigation--prev");
+modalNext.classList.add("gallery__navigation--next");
+modalClose.classList.add("gallery__navigation--close");
+
+function createButton(action) {
+    const button = document.createElement("button");
+    button.addEventListener("click", action);
+    return button;
 }
 
-// Close the Modal
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = "none";
-  // var mainContainer = document.getElementById('top_header');
-  // mainContainer.style.display = 'block';
+function prevItem() {
+    currentItem = (currentItem - 1 + items.length) % items.length;
+    showModal();
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n, slideId) {
-  showSlides(slideIndex += n, slideId);
+function nextItem() {
+    currentItem = (currentItem + 1) % items.length;
+    showModal();
 }
 
-// Thumbnail image controls
-function currentSlider(n,slideId) {
-  showSlides(slideIndex = n, slideId);
+function closeModal() {
+    modalGallery.remove();
+    body.classList.remove('noscroll'); // Ensure scrolling is enabled
 }
 
-function showSlides(n, slideId) {
-  var i;
-  var slides = document.getElementsByClassName(slideId);
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
+function showModal() {
+    const clickedImage = items[currentItem].querySelector("img");
+    modalImg.src = clickedImage.src;
+    modalImg.alt = clickedImage.alt;
+    modalGallery.innerHTML = ''; // Clear the modalGallery content
+    modalGallery.append(modalImg, modalPrev, modalNext, modalClose);
+    body.appendChild(modalGallery);
 }
+
+// Attach click event to each gallery item
+items.forEach((item, index) => {
+    item.addEventListener('click', function () {
+        currentItem = index; // Set the clicked image index
+        showModal();
+        body.classList.add('noscroll'); // Disable scrolling when modalGallery is open
+    });
+});
+
+// Close modalGallery with Escape key
+document.body.addEventListener('keyup', (ev) => {
+    if (ev.key === "Escape" && body.contains(modalGallery)) {
+        closeModal();
+    }
+});
+
+// Hover functionality for image captions
+items.forEach((item) => {
+    const img = item.querySelector("img");
+    const caption = item.querySelector(".gallery__image__caption");
+
+    item.addEventListener("mouseenter", () => {
+        caption.style.opacity = "1";
+    });
+
+    item.addEventListener("mouseleave", () => {
+        caption.style.opacity = "0";
+    });
+});
