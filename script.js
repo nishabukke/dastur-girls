@@ -1,3 +1,12 @@
+let tl = gsap.timeline();
+
+tl.from(".banner-heading h1", {
+    y: 60,
+    opacity: 0,
+    duration: 1.5,
+    ease: "powe2.out"
+},"-=0.4");
+
 
 const holidays = [
     {
