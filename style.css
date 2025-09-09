@@ -84,7 +84,7 @@ ul li{
 
 .carousel-item img{
     width: 100%;
-    height: 600px;
+    height: 500px;
 }
 
 .carousel, #header{
@@ -93,7 +93,7 @@ ul li{
 
 .upper-header{
     background-color: #085291;
-    padding: 10px 0px;
+    padding: 8px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,7 +102,7 @@ ul li{
 select#website-select{
   border: none;
   border-radius: 30px;
-  padding: 8px 5px;
+  padding: 5px 10px;
   background-color: #ffffffee;
   }
 
@@ -143,7 +143,7 @@ select#website-select{
 
 .payment-btn{
     background-color: #f8c301;
-    padding: 10px;
+    padding: 5px 10px;
     color: #191919  ;
     border-radius: 50px;
 }
@@ -175,10 +175,6 @@ select#website-select{
 }
 
 .lower-header{
-    position: absolute;
-    left: 0;
-    top: 9.5%;
-    width: 100%;
     background-color: #e9f2ff;
 }
 
@@ -186,7 +182,7 @@ select#website-select{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
 }
 
 .lower-header img{
@@ -464,183 +460,49 @@ select#website-select{
 
 /* about content css end */
 
-/* event calender css start */
+/* facility section css start */
 
-.event-calender{
-    background-color: #fff;
+.facilities-section{
+  background-color: #e9f2ff;
 }
 
-.header {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .header #month {
-    color: #085291;
-    font-size: 30px;
-    font-weight: 600;
-  }
-  
-  .header button {
-    width: 75px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 5px;
-    border-radius: 3px;
-    color: white;
-  }
-  
-  .header button {
-    background-color: #085291;
-  }
-  .weekdays {
-    width: 100%;
-    display: flex;
-    background-color: #2f3640;
-    font-size: 17px;
-    color: #fff;
-    font-weight: 500;
-  }
-  
-  .weekdays div {
-    width: 100px;
-    padding: 8px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  
-  #calendar {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .day {
-    width: 66px;
-    height: 49px;
-    padding: 12px;
-    cursor: pointer;
-    margin: 5px;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 3px #cbd4c2;
-    color: #7f8fa6;
-    font-weight: 500;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .day:hover {
-    background-color: rgba(112, 111, 211, 0.1);
-    color: #706fd3;
-  }
-  
-  #currentDay {
-    background-color: #706fd3;
-    color: #fff;
-  }
-  
-  .event {
-    font-size: 10px;
-    padding: 3px;
-    background-color: #3d3d3d;
-    color: #fff;
-    border-radius: 5px;
-    max-height: 55px;
-    overflow: hidden;
-  }
-  
-  .event.holiday {
-    background-color: palegreen;
-    color: #3d3d3d;
-  }
-  
-  .plain {
-    cursor: default;
-    box-shadow: none;
-  }
-  
-  #modal {
-    display: none;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  #addEvent,
-  #viewEvent {
-    display: none;
-    width: 350px;
-    background-color: #fff;
-    padding: 25px;
-    position: absolute;
-    z-index: 20;
-  }
-  
-  #addEvent h2,
-  #viewEvent h2 {
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-  
-  #txtTitle {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: 1px solid #cbd4c2;
-    font-size: 16px;
-  }
-  
-  #btnSave {
-    background-color: #2ed573;
-  }
-  
-  .btnClose {
-    background-color: #2f3542;
-  }
-  
-  #viewEvent p {
-    margin-bottom: 20px;
-  }
-  
-  #btnDelete {
-    background-color: #ea2027;
-  }
-  
-  .error {
-    border-color: #ea2027 !important;
-  }
+.swiper-wrapper{
+  padding: 50px 0px;
+}
 
-  .event-desc{
-    border: 1px solid #d1d1d1;
-    overflow: hidden;
-    padding: 40px 30px 30px;
-    min-height: 400px;
-  }
+.swiper-button-next, .swiper-button-prev{
+  color: #fff;
+  background-color: #085291;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
 
-  .event-desc h3{
-    font-size: 20px;
-    margin: 0 0 20px;
-    padding: 0 0 15px;
-    border-bottom: 1px solid #d1d1d1;
-  }
+.swiper-button-next:after, .swiper-button-prev:after{
+  font-size: 14px;
+  font-weight: 700;
+}
 
-  .event-desc ul li span{
-    font-size: 16px;
-    color: #555;
-    margin-right: 10px;
-  }
+.facility-item{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+}
 
-/* event calender css end */
+.facility-item img{
+  width: 100%;
+  height: 200px;
+}
+
+.facility-desc{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* facility section css end */
 
 
 /* photo gallery css start */
@@ -815,7 +677,7 @@ figure {
 }
 
 .footer-inner img{
-  width: 140px;
+  width: 100px;
 }
 
 .footer-inner{
