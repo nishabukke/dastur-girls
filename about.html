@@ -16,7 +16,7 @@
             <div class="upper-header">
                 <div class="container-fluid">
                     <div class="left-upper-header">
-                        <a href="#"><span class="fas fa-envelope"></span> someone@example.com</a>
+                        <a href="mailto:sdngs@dasturgirls.org"><span class="fas fa-envelope"></span> sdngs@dasturgirls.org</a>
                         <a href="tel:02026362631"><span class="fas fa-phone"></span>020-2636 2631, Ext.: 402</a>
                     </div>
                     <div class="middle-upper-header">
@@ -45,7 +45,7 @@
             </a>
             <div class="navigation">
               <ul class="nav navbar-nav">
-                  <li class="nav-li"><a href="index.html">Home</a></li>
+                  <li class="nav-li"><a href="index.html" >Home</a></li>
                   <li class="nav-li"><a href="#" class="active">About Us  </a>
                     <div class="dropdown">
                         <ul>
@@ -57,28 +57,19 @@
                   <li class="nav-li"><a href="#">Rules  </a>
                     <div class="dropdown">
                         <ul>
-                            <li><a href="#">Timings & Prayer</a></li>
-                            <li><a href="#">Rules for School</a></li>
+                            <li><a href="#">General Rules</a></li>
+                            <li><a href="#">Admisison & Withdrawl</a></li>
                         </ul>
                       </div>
                   </li>
-                  <li class="nav-li"><a href="#">Infrastructure & Facilities  </a>
-                    <div class="dropdown">
-                        <ul>
-                            <li><a href="#">Infrastructure</a></li>
-                            <li><a href="#">Facilities</a></li>
-                            <li><a href="#">Library</a></li>
-                            <li><a href="#">Labs</a></li>
-                        </ul>
-                      </div>
-                  </li>
+                  <li class="nav-li"><a href="#">Infrastructure</a></li>
                   <li class="nav-li"><a href="#">Academics  </a>
                     <div class="dropdown">
                         <ul>
                             <li><a href="#">Curriculum & Affiliation</a></li>
                             <li><a href="#">Examination & Promotion</a></li>
-                            <li><a href="#">Awards</a></li>
-                            <li><a href="#">Co-curricular</a></li>
+                            <li><a href="#">Beyond Academics</a></li>
+                            <li><a href="#">Achievements</a></li>
                         </ul>
                       </div>
                   </li>
@@ -89,6 +80,74 @@
             </div>  
       </div>
     </header>
+
+    <div class="mobile-header">
+      <div class="mobile-menu-container">
+          <div class="logo">
+              <a href="index.html"><img src="images/dastur-logo.png" alt=""></a>
+          </div>
+          <div class="mobile-menu">
+              <a class="canva_expander nav-menu-link menu-button" href="#">
+                  <span class="dot1"></span>
+                  <span class="dot2"></span>  
+                  <span class="dot3"></span>
+                  <span class="dot4"></span>
+              </a>
+              <button class="cross">&#735;</button>
+          <div class="menu">
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#" class="nav__submenu">About <i class="fas fa-chevron-right"></i>
+                    <ul class="nav__sub">
+                        <li class="nav__item"><a class="sub__close" href="#"><i class="fas fa-chevron-left"></i> Back</a></li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="principal-desk.html">Principal's Desk</a>
+                        </li>
+                    </ul>
+                    </a>
+                  </li>
+                  <li><a href="#" class="nav__submenu">Rules <i class="fas fa-chevron-right"></i>
+                    <ul class="nav__sub">
+                        <li class="nav__item"><a class="sub__close" href="#"><i class="fas fa-chevron-left"></i> Back</a></li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="#">General Rules</a>
+                        </li>
+                        <li class="nav__item">
+                        <a class="nav__link" href="#">Admission & Withdrawl</a>
+                        </li>
+                    </ul>
+                    </a>
+                  </li>
+              <li>
+                  <a href="#" class="nav__submenu">Academics <i class="fas fa-chevron-right"></i>
+                      <ul class="nav__sub">
+                          <li class="nav__item"><a class="sub__close" href="#"><i class="fas fa-chevron-left"></i> Back</a></li>
+                          <li class="nav__item">
+                          <a class="nav__link" href="#">Curriculum & Affiliation</a>
+                          </li>
+                          <li class="nav__item">
+                          <a class="nav__link" href="#">Examination & Promotion</a>
+                          </li>
+                          <li class="nav__item">
+                          <a class="nav__link" href="#">Beyond Academics</a>
+                          </li>
+                          <li class="nav__item">
+                          <a class="nav__link" href="#">Achievements</a>
+                          </li>
+                      </ul>
+                  </a>
+              </li>
+              <li><a href="#">Infrastructure</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+          </div> 
+          </div>
+      </div>
+    </div>
 
     <main class="site-content">
 
@@ -111,18 +170,15 @@
                     <div class="TabButton " id="Tab2" onclick="activeTab(event, 'Tab2')">Our Vision</div>
                     <div class="TabButton " id="Tab3" onclick="activeTab(event, 'Tab3')">Our Mission</div>
                     <div class="TabButton " id="Tab4" onclick="activeTab(event, 'Tab4')">Our Ideas</div>
+                    <div class="TabButton " id="Tab5" onclick="activeTab(event, 'Tab5')">School Song</div>
+                    <div class="TabButton " id="Tab6" onclick="activeTab(event, 'Tab6')">Houses</div>
+                    <div class="TabButton " id="Tab7" onclick="activeTab(event, 'Tab7')">Our Team</div>
                 </div>
             </div>
             <div class="right-about">
-                <div class="d-flex flex-column section-tab pt-3">
+                <div class="d-flex flex-column section-tab">
                     <div id="SectionTab1" class="tab-section d-chart-n d-chart-show" >
-                        <div class="common-heading">
-                            <div class="small-heading">
-                                <span></span>
-                                about us
-                            </div>
-                        </div>
-                        <img src="images/about-img.jpg" alt="">
+                        <img src="images/about-img.png" alt="">
                             <p>On the demise of their High Priest Sardar Dastur Nosherwan Jamasp on 27th October 1884, the Parsee Community raised subscriptions to perpetuate the memory of their deeply venerated spiritual head, and the Sardar Dastur Nosherwan Girls' High School came into being.</p>
                             <p>This School first started in 1893 in House #317, Main Street (then Wyse's Bakery and now Central Bank of India). The three surviving brothers of the Dastur family presented this house to the school in memory of their sister the Late Bai Behmanbai. Later on the school shifted from 317, Main Street to Bungalow No. 3, Arsenal Road, now Moledina Road. It was inaugurated in 1893 by Khan Bahadur Meher Hoshang Dastur. The Sardar Dastur Nosherwan Girls' High School's Founder's Day is celebrated on 1st February every year.</p>
                             <p>In 1911 to accommodate a larger number of children, a new building was erected in memory of Bai Behmanbai Pestonji Kanga by her brothers. The building was designed by Mr. Burjor S. Jamshed Aga of the well known firm of Architects M/s. Shapurji N. Chandabhoy and Co. Bombay. Between 1920-30, Lady Dhunjbhoy Bomanji and Minocher Girls' Hostel buildings were added.</p>
@@ -131,34 +187,66 @@
                             <p>In its 130 years of existence , Sardar Nosherwan Girls'High School has built a reputation of being one of the leading educational institutions for girls.</p>
                                 </div>
                     <div id="SectionTab2" class="tab-section d-chart-n">
-                        <div class="common-heading">
-                            <div class="small-heading">
-                                <span></span>
-                                Our Vision
-                            </div>
-                        </div>
                         <img src="images/vision-img.jpg" alt="">
+                        <div class="common-heading">
+                            <h2>Our Vision</h2>
+                        </div>
                         <p>We envision sending out into the world mature young ladies who have been exposed to various learning experiences at school and are ready to excel in the field of their choice. They are eager to contribute to society while at the same time selectively picking up the good from there. Our young ladies are open to developing a symbiotic relationship with the world at large. We see our girls as leaders of tomorrow with futuristic outlook.</p>
                     </div>
                     <div id="SectionTab3" class="tab-section d-chart-n">
-                        <div class="common-heading">
-                            <div class="small-heading">
-                                <span></span>
-                                Our Mission
-                            </div>
-                        </div>
                         <img src="images/mission-img.jpg" alt="">
+                        <div class="common-heading">
+                            <h2>Our Mission</h2>
+                        </div>
                         <p>Our Mission is to help the child realize her own potential.We facilitate the child to draw from within while at the same time exposing her steadily to various learning experiences. We encourage our students to compete with themselves and set targets for bettering themselves each time. The integrated guidance and development programme at school thus provided helps us to achieve our mission and their dreams.</p>
                     </div>
                     <div id="SectionTab4" class="tab-section d-chart-n">
-                        <div class="common-heading">
-                            <div class="small-heading">
-                                <span></span>
-                                Our Ideas
-                            </div>
-                        </div>
                         <img src="images/ideas-img.jpg" alt="">
+                        <div class="common-heading">
+                            <h2> Our Ideas</h2>
+                        </div>
                         <p>To educate actually means to facilitate the child to draw from within. Each child is an entity and has different talents, interests and inclinations. Keeping this in mind, at Dastur Girls’ we allow each child to express herself in the medium of her choice – Art , Drama, Elocution, Writing, Poetry, Sports , Games, Music, Culinary skills etc. We send into the world a mature young lady having positive civilisational values and who is ' future ready' to accept challenges, with a fully rounded personality.</p>
+                    </div>
+                    <div id="SectionTab5" class="tab-section d-chart-n">
+                        <p class="text-center"><b>WE ARE DASTURIANS</b></p>
+                        <p class="text-center">
+                            We are Dasturians, so bold and brave, 
+                            We're happy children, honest and true, 
+                            Love and gratitude, we offer you, 
+                            Dear Alma Mater, we're proud of you.
+                        </p>
+                        <p class="text-center">
+                            Our life's first lessons, we learnt them here, 
+                            Respect our elders, to be sincere, 
+                            Obey our parents and teachers dear, 
+                            We learn all this in our Life's Best Years. 
+                        </p>
+                        <p class="text-center">
+                            Good thoughts, Good words, Good deeds, 
+                            is our motto to succeed, 
+                            Good thoughts, Good words, Good deeds, 
+                            is our prayer, God give us the lead. 
+                        </p>
+                        <p class="text-center">
+                            We're simple, noble Dasturians, 
+                            We try to do the right, 
+                            God is always on our side, 
+                            We keep walking in His Light.
+                        </p>
+                    </div>
+                    <div id="SectionTab6" class="tab-section d-chart-n">
+                        <img src="images/houses.jpg" alt="">
+                        <div class="common-heading">
+                            <h2> Our Houses</h2>
+                        </div>
+                        <p>To inculcate competitive spirit and espirit de corps, the girls are grouped into 4 houses – <b>Tata (Green House)</b>, <b>Bhabha (Violet House)</b>, <b>Dastur (Yellow House)</b>  and <b>Wadia (Red House)</b>.</p>
+                    </div>
+                    <div id="SectionTab7" class="tab-section d-chart-n">
+                        <img src="images/team.jpg" alt="">
+                        <div class="common-heading">
+                            <h2> Our Team Members</h2>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit alias commodi aut enim modi maxime iste, corporis recusandae dolor unde error esse aperiam officia id quos doloremque voluptas laudantium eveniet.</p>
                     </div>
                 </div>
             </div>
@@ -169,7 +257,7 @@
         <div class="footer-inner container">
                 <div class="footer-links">
                     <div class="footer-logo">
-                        <img src="images/logo.png" alt="">
+                        <img src="images/dastur-logo.png" alt="">
                     </div>
                     <p>Our school is a recognised Secondary School and admits girls without distinction of caste and creed.</p>
                 </div>
@@ -210,9 +298,8 @@
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+
+
 </body>
 </html>
