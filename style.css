@@ -290,10 +290,6 @@ select#website-select{
       text-transform: capitalize;
     }
   
-    ul.nav li .dropdown ul li{
-      color: v;
-    }
-  
     ul.nav li .dropdown li:hover,  ul.nav li .dropdown li.active{
       background-color: #085291;
     }
@@ -302,6 +298,8 @@ select#website-select{
       color: #fff;
       padding-right: 15px;
     }
+
+    
 
 
 /* feature content css start */
@@ -401,8 +399,12 @@ select#website-select{
   padding: 25px;
 }
 
+.card-text marquee p{
+  padding: 5px 0px;
+}
+
 .card-text p img{
-  margin-right: 5px;
+  margin-right: 8px;
   width: 50px;
 }
 
@@ -675,7 +677,7 @@ figure {
 
 
 
-/********** MOBILE HEADER ************/
+/********** fOBILE HEADER ************/
 
 
 .mobile-header{
@@ -870,6 +872,12 @@ figure {
       grid-template-columns: repeat(1,1fr);
       gap: 20px;
     }
+
+    .left-about img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
     .middle-about{
       padding: 0;

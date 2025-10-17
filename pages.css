@@ -439,6 +439,9 @@ select#website-select{
     padding-bottom: 30px;
   }
 
+  #SectionTab5 blockquote{
+    text-align: right;
+  }
 
 /* about css end */
 
@@ -938,7 +941,7 @@ select#website-select{
       font-size: 22px;
     }
 
-    .about-inner, .feature-inner, .gallery, .footer-inner, .about-section, .inner-images{
+    .about-inner, .feature-inner, .gallery, .footer-inner, .about-section, .inner-images, .contact-section{
       grid-template-columns: repeat(1,1fr);
       gap: 20px;
     }
